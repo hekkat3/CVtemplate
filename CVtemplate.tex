@@ -1,0 +1,162 @@
+%%% Personal CV template
+
+%% Based on a template by Lilanath Ghimire
+%% https://www.overleaf.com/latex/templates/simple-professional-cv/vtwfkggdnhft
+
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{newtxtext,newtxmath}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{graphicx}
+\usepackage{transparent}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{nicematrix}
+\usepackage{tikz}
+\usepackage{array} 
+\usepackage{colortbl}
+\usepackage{lipsum}
+
+% For hiding page no
+\pagestyle{empty}
+
+% Define Command for name and job position
+\newcommand{\myname}[1]{\textbf{\Huge\selectfont\MakeUppercase{#1}}\\}
+\newcommand{\myjobtitle}[1]{{\large #1}\\}
+
+% Define Command For Topic,Upper case subtopic,Subtopic and Short Horizontal Black Line 
+\newcommand{\myline}[1]{\rule{#1}{1.0pt}\\}
+
+\newcommand{\topic}[1]{\textcolor{MidnightBlue}{\textbf{\Large\selectfont\MakeUppercase{#1}}\\\vspace{-0.5cm}\myline{1.0cm}}}
+
+\newcommand{\uppersubtopicnnl}[1]{\textcolor{MidnightBlue!50}{\textbf{\normalsize\selectfont\MakeUppercase{#1}}}} % For tables
+\newcommand{\uppersubtopic}[1]{\uppersubtopicnnl{#1}\\}
+
+
+\begin{document}
+
+
+% Name, job title, and horizontal line
+\setstretch{1.5}
+\begin{flushleft}
+  \myname{NAME} %name
+  \myname{SURNAME} %surname
+  \myjobtitle{Occupation} %designation
+  \textcolor{CornflowerBlue}{\rule{\linewidth}{1pt}}\\
+\end{flushleft}
+
+% Separating Rest of document on two column
+% First Page
+\vspace{-1.25cm} % To make horizontal and vertical line                         meet
+\begin{multicols}{2}
+\setlength{\arrayrulewidth}{1pt} % Set line thickness
+\arrayrulecolor{CornflowerBlue}
+
+\noindent\begin{tabular}{p{0.4\textwidth}|@{\hspace{5mm}}p{0.5\textwidth}}
+
+{
+\setstretch{1.5}
+\begin{flushleft}
+\topic{contact}
+\uppersubtopic{phone}
+000 00 00 00\\
+\uppersubtopic{email}
+example@mail.com\\
+\uppersubtopic{github}
+https://github.com/hekkat3\\
+
+\textcolor{CornflowerBlue}{\rule{\linewidth}{0.5pt}}\\
+
+\topic{about me}
+\uppersubtopic{date of birth}
+00/00/0000\\
+\uppersubtopic{driving license}
+license\\
+\uppersubtopic{address} 
+address\\
+City\\
+\uppersubtopic{languages}
+Language (native)\\
+Another language (advanced)\\
+\end{flushleft}
+}
+&
+{
+\setstretch{1.5}
+\begin{flushleft}
+\topic{studies}
+\begin{itemize}
+	\item{Studies in University}
+	\item{Studies in High School}
+\end{itemize}
+\textcolor{CornflowerBlue}{\rule{\linewidth}{0.5pt}}\\
+\topic{skills}
+\begin{center}
+\begin{NiceTabular}{>{\columncolor{SkyBlue!30}}c | >{\columncolor{SkyBlue!30}}c | >{\columncolor{SkyBlue!30}}c}
+	\rowcolor{SkyBlue!15}\uppersubtopicnnl{software} & \uppersubtopicnnl{grupo2} & \uppersubtopicnnl{grupo3}\\
+	Skill1 \textcolor{Red}{•••}\textcolor{Red!30}{•} & Skill2\textcolor{Red}{•}\textcolor{Red!30}{•••} & Skill3\textcolor{Red}{•••}\textcolor{Red!30}{•}\\
+	Skill4 \textcolor{Red}{••}\textcolor{Red!30}{••} & Skill5 \textcolor{Red}{••}\textcolor{Red!30}{••} & Skill6 \textcolor{Red}{••}\textcolor{Red!30}{••}\\
+	Skill7 \textcolor{Red}{••}\textcolor{Red!30}{••} & &\\
+\end{NiceTabular}
+\end{center}
+	
+\textcolor{CornflowerBlue}{\rule{\linewidth}{0.5pt}}\\
+    
+\topic{learning...}
+\begin{center}
+\begin{NiceTabular}{>{\columncolor{SkyBlue!30}}c | >{\columncolor{SkyBlue!30}}c}
+	\rowcolor{SkyBlue!15}\uppersubtopicnnl{grupo1} & \uppersubtopic{grupo2}
+	Skill1 & Skill2\\
+	& Skill3 \\
+\end{NiceTabular}
+\end{center}
+    
+
+\end{flushleft}
+}
+\end{tabular}
+\end{multicols}
+
+\newpage
+
+\vspace{-1.25cm} % To make horizontal and vertical line                         meet
+\begin{multicols}{2}
+\setlength{\arrayrulewidth}{1pt} % Set line thickness
+\arrayrulecolor{CornflowerBlue}
+
+\noindent\begin{tabular}{p{0.4\textwidth}|@{\hspace{5mm}}p{0.5\textwidth}}
+
+{
+\setstretch{1.5}
+\begin{flushleft}
+
+\uppersubtopic{hobbies}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+\end{flushleft}
+}
+&
+{
+\setstretch{1.5}
+\begin{flushleft}
+
+\topic{traits}
+\begin{itemize}
+\item{Trait1}
+\item{Trait2}
+\item{Trait3}
+
+\end{itemize}
+
+\end{flushleft}
+}
+\end{tabular}
+\end{multicols}
+
+\end{document}
